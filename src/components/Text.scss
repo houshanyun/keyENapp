@@ -1,0 +1,38 @@
+
+.textDisplay {
+    width: 100%;
+    padding: 3rem;
+
+    .textWrapper {
+        position: relative;
+        width: 1200px;
+        height: 400px;
+        background-color: #0a5;
+        margin: auto;
+
+        .miss {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            color: #fff;
+        }
+        .complateTime {
+          position: absolute;
+          bottom: 1rem;
+          right: 1rem;
+          color: #fff;
+
+        }
+        .textContent {
+            position: relative;
+            width: 100%;
+            padding: 1rem;
+            color: #eee;
+            text-align: left;
+            word-wrap: break-word;
+            font-size: 3rem;
+            letter-spacing: 2rem;
+
+        }
+    }
+}

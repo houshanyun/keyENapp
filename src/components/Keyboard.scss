@@ -1,0 +1,105 @@
+@use './BtnPosition.scss';
+.popup {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popupContent {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        text-align: center;
+        line-height: 360px;
+        font-size: 2rem;
+        letter-spacing: .5rem;
+        background-color: #ccc;
+        border-radius: .5rem;
+        box-shadow: 0 0 1rem #333;
+        & > button {
+          position: absolute;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border: none;
+          border-radius: 5px;
+          width: 100px;
+          height: 30px;
+          line-height: 30px;
+          background-color: #08f;
+          color: #fff;
+          cursor: pointer;
+        }
+    }
+}
+
+.complateWrapper {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100vh; 
+  background-color: rgba($color: #000000, $alpha: 0.7); 
+  & > button {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #777;
+    background-color: #fa0;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+  }
+
+  .complate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height:400px;
+    background-color: #07f;
+    color: #fff;
+    text-align: center;
+    line-height: 400px;
+    font-size: 2rem;
+    border-radius: 10px;
+  }
+
+
+}
+
+.keyborad-group {
+    width: 1200px;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    .keyborad-wrapper {
+        width: 1050px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        outline: none;
+    }
+
+    .btn {
+        //width: 5rem;
+        //height: 5rem;
+        background-color: #0af;
+        text-align: center;
+        line-height: 5rem;
+        border: 2px solid #333;
+        box-shadow: 0 0 5px #000;
+        color: #fff;
+    }
+}
+
+
