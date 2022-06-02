@@ -75,6 +75,8 @@
 }
 
 .keyborad-group {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     width: 1200px;
     position: absolute;
     bottom: 2rem;
