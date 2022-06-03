@@ -4,14 +4,12 @@ html {
   box-sizing: border-box;
 }
 
-
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-family: 'Roboto Flex', sans-serif;
 }
 
 a {
@@ -19,12 +17,15 @@ a {
   align-items: center; 
 }
 
-
-
 html, body {
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   margin: 0;
   font-size: 16px;
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+.root {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2, 1fr);
