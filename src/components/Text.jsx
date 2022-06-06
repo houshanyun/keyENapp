@@ -1,3 +1,5 @@
+/* eslint-disable require-jsdoc */
+/* eslint-disable react/prop-types */
 import React, {useEffect, useState} from 'react';
 import {ALPHABET} from '../constant/ALPHABET';
 import './Text.scss';
