@@ -1,7 +1,7 @@
 import React from 'react';
-import './Keyboard.scss';
+import './Popup.scss';
 
-function Popup({complate, popup, setPopup, startKeyOn, keyboardRef}) {
+function Popup({complate, popup, setPopup, startKeyOn}) {
   function resetHandle() {
     location.reload();
   }
@@ -11,17 +11,17 @@ function Popup({complate, popup, setPopup, startKeyOn, keyboardRef}) {
         complate &&
         <div className='complateWrapper'>
           <div className='complate'>已完成!</div>
-          <button onClick={resetHandle}>重新開此</button>
         </div>
       }
-      { popup &&
-        <div className='popup'>
-          <div className='popupContent'>
-            請按下開始
-            <button onClick={startKeyOn}>開始</button>
-          </div>
+      <div className='popup'>
+        <div className='popupWrapper'>
+          {
+            popup ?
+            <button onClick={startKeyOn}>開始</button> :
+            <button onClick={resetHandle}>重新開始</button>
+          }
         </div>
-      }
+      </div>
     </>
   );
 }

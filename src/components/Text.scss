@@ -1,44 +1,30 @@
+.textWrapper {
+  width: 70%;
+  height: 35vh;
+  margin-top: 2em;
+  align-self: center;
+  justify-self: center;
+  background-color: green;
+  color: white;
+  border-radius: 1em;
+  padding: 1.5em;
+  position: relative;
+  word-wrap: break-word;
 
-.textDisplay {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    width: 100%;
-    padding: 1rem;
+  .textContent {
+    font-size: 5em;
+    letter-spacing: 20px;
+    //word-wrap: break-word;
 
-    .textWrapper {
-        position: relative;
-        width: 1200px;
-        // height: 400px;
-        background-color: #0a5;
-        border-radius: 2em;
-        margin: auto;
-        padding: 2em;
-
-        .miss {
-            position: absolute;
-            bottom: 1em;
-            left: 2em;
-            color: #fff;
-            padding-top: 2em;
-        }
-        .complateTime {
-          position: absolute;
-          bottom: 1em;
-          right: 2em;
-          color: #fff;
-          padding-top: 2em;
-
-        }
-        .textContent {
-            position: relative;
-            width: 100%;
-            padding: 1rem;
-            color: #eee;
-            text-align: left;
-            word-wrap: break-word;
-            font-size: 3rem;
-            letter-spacing: 2rem;
-
-        }
-    }
+  }
+  .miss {
+    position: absolute;
+    bottom: 1em;
+    left: 2em;
+  }
+  .complateTime {
+    position: absolute;
+    bottom: 1em;
+    right: 2em;
+  }
 }

@@ -1,10 +1,8 @@
-/* eslint-disable require-jsdoc */
-/* eslint-disable react/prop-types */
 import React, {useEffect, useState} from 'react';
 import {ALPHABET} from '../constant/ALPHABET';
 import './Text.scss';
 
-function Text({delWord, complate, keyboardRef}) {
+function Text({delWord, complate, keyRef}) {
   const myList = Array.from(ALPHABET);
   const [miss, setMiss] = useState(0);
   const [textList, setTextList] = useState(myList);
@@ -31,8 +29,8 @@ function Text({delWord, complate, keyboardRef}) {
     if (textList.length === 0) {
       const end = new Date();
       setEndTime(() => end.getTime());
-      complate(true);
-      keyboardRef.current.blur();
+      keyRef.current.blur();
+      complate(true)
     }
   }, [textList]);
 

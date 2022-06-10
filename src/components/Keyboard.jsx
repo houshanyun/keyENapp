@@ -1,15 +1,8 @@
-/* eslint-disable require-jsdoc */
-import Text from './Text';
-import {ALPHABET} from '../constant/ALPHABET';
-import React from 'react';
-import {useState, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import './Keyboard.scss';
-import Popup from './Popup';
+import {ALPHABET} from '../constant/ALPHABET';
 
-function Keyboard() {
-  const [delWord, setDelWord] = useState('');
-  const [popup, setPopup] = useState(true);
-  const [complate, setComplate] = useState(false);
+function Keyboard({setDelWord, setKeyRef}) {
   const keyboardRef = useRef(null);
 
   const keyboardHandle = (e) => {
@@ -33,37 +26,14 @@ function Keyboard() {
     setDelWord(() => e.key);
   };
 
-  const startKeyOn = () => {
-    const closePopup = () => {
-      if (popup) {
-        setPopup(false);
-      } else {
-        return;
-      }
-    };
-    keyboardRef.current.focus();
-    closePopup();
-  };
-
+  useEffect(() => {
+    setKeyRef(keyboardRef);
+  }, []);
   return <>
-    <Popup
-      complate={complate}
-      popup={popup}
-      setPopup={setPopup}
-      keyboardRef={keyboardRef}
-      startKeyOn={startKeyOn}
-    />
 
-    <div className='textDisplay'>
-      <Text
-        delWord={delWord}
-        complate={setComplate}
-        keyboardRef={keyboardRef}
-      />
-    </div>
-    <div className='keyborad-group'>
+    <div className='keyboard-group'>
       <div
-        className='keyborad-wrapper'
+        className='keyboard-wrapper'
         ref={keyboardRef}
         onKeyDown={keyboardHandle}
         tabIndex='0'>
