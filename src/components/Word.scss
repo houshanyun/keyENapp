@@ -7,10 +7,11 @@
   background-color: green;
   color: white;
   border-radius: 1em;
+  border: 5px outset #666;
   padding: 1.5em;
   position: relative;
   word-wrap: break-word;
-
+  overflow: hidden;
   .textContent {
     font-size: 5em;
     letter-spacing: 20px;

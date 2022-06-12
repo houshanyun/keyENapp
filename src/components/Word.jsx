@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {ALPHABET} from '../constant/ALPHABET';
-import './Text.scss';
+import './Word.scss';
 
 function Text({delWord, complate, keyRef}) {
   const myList = Array.from(ALPHABET);

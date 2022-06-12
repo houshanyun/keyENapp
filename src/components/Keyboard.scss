@@ -4,6 +4,7 @@
   width: 70%;
   height: 35vh;
   justify-self: center;
+  align-self: end;
   .keyboard-wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -12,7 +13,7 @@
     outline: none;
     .btn {
       background-color: #0af;
-      border: 1px solid #0af;
+      box-shadow: 2px 2px 1px 3px #666;
       text-align: center;
       line-height: 50px;
       padding: 0 20px;

@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import './App.scss';
 import Keyboard from './components/Keyboard';
 import Popup from './components/Popup';
-import Text from './components/Text';
+import Word from './components/Word';
+import NowTime from './components/NowTime';
 
 function App() {
   const [complate, setComplate] = useState(false);
@@ -25,7 +26,8 @@ function App() {
   return (
     <>
       <h1>KeyEN App</h1>
-      <Text
+      <NowTime />
+      <Word
         delWord={delWord}
         complate={setComplate}
         keyRef={keyRef}
@@ -36,6 +38,7 @@ function App() {
         setPopup={setPopup}
         startKeyOn={startKeyOn} />
       <Keyboard setDelWord={setDelWord} setKeyRef={setKeyRef} />
+      <footer>houshanyun &copy; 2022</footer>
     </>
   );
 }
