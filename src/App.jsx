@@ -5,11 +5,12 @@ import Popup from './components/Popup';
 import Word from './components/Word';
 import NowTime from './components/NowTime';
 
+// eslint-disable-next-line require-jsdoc
 function App() {
   const [complate, setComplate] = useState(false);
   const [popup, setPopup] = useState(true);
   const [delWord, setDelWord] = useState('');
-  const [keyRef, setKeyRef] = useState(null)
+  const [keyRef, setKeyRef] = useState(null);
 
   const startKeyOn = () => {
     const closePopup = () => {
